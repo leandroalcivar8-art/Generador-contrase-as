@@ -1,0 +1,111 @@
+<svg viewBox="0 0 900 1700" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+
+  <!-- Inicio -->
+  <ellipse cx="450" cy="40" rx="90" ry="35" fill="#2e7d32" stroke="#1b5e20" stroke-width="2"/>
+  <text x="450" y="46" text-anchor="middle" fill="white" font-size="16" font-weight="bold">INICIO</text>
+  <line x1="450" y1="75" x2="450" y2="110" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Mostrar menu -->
+  <rect x="320" y="110" width="260" height="60" fill="#1565c0" stroke="#0d47a1" stroke-width="2" rx="6"/>
+  <text x="450" y="135" text-anchor="middle" fill="white" font-size="14">Mostrar menú:</text>
+  <text x="450" y="155" text-anchor="middle" fill="white" font-size="14">1) Generar  2) Salir</text>
+  <line x1="450" y1="170" x2="450" y2="210" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Decision salir -->
+  <polygon points="450,210 570,265 450,320 330,265" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+  <text x="450" y="260" text-anchor="middle" font-size="13">¿Opción</text>
+  <text x="450" y="278" text-anchor="middle" font-size="13">= Salir?</text>
+
+  <!-- Si sale -->
+  <line x1="570" y1="265" x2="760" y2="265" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="660" y="255" font-size="13" fill="#c62828">Sí</text>
+  <ellipse cx="800" cy="265" rx="80" ry="35" fill="#c62828" stroke="#8e0000" stroke-width="2"/>
+  <text x="800" y="271" text-anchor="middle" fill="white" font-size="16" font-weight="bold">FIN</text>
+
+  <!-- No sale -->
+  <line x1="450" y1="320" x2="450" y2="355" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="465" y="340" font-size="13" fill="#2e7d32">No</text>
+
+  <!-- Pedir longitud -->
+  <rect x="300" y="355" width="300" height="55" fill="#1565c0" stroke="#0d47a1" stroke-width="2" rx="6"/>
+  <text x="450" y="388" text-anchor="middle" fill="white" font-size="14">Pedir longitud de contraseña</text>
+  <line x1="450" y1="410" x2="450" y2="445" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Pedir tipos -->
+  <rect x="260" y="445" width="380" height="70" fill="#1565c0" stroke="#0d47a1" stroke-width="2" rx="6"/>
+  <text x="450" y="472" text-anchor="middle" fill="white" font-size="14">Pedir tipos de caracteres:</text>
+  <text x="450" y="492" text-anchor="middle" fill="white" font-size="13">mayúsculas, minúsculas, números, símbolos</text>
+  <line x1="450" y1="515" x2="450" y2="550" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Decision al menos uno -->
+  <polygon points="450,550 600,615 450,680 300,615" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+  <text x="450" y="610" text-anchor="middle" font-size="13">¿Seleccionó al</text>
+  <text x="450" y="628" text-anchor="middle" font-size="13">menos un tipo?</text>
+
+  <!-- No -> error -->
+  <line x1="300" y1="615" x2="120" y2="615" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="190" y="605" font-size="13" fill="#c62828">No</text>
+  <rect x="20" y="585" width="180" height="60" fill="#b71c1c" stroke="#8e0000" stroke-width="2" rx="6"/>
+  <text x="110" y="610" text-anchor="middle" fill="white" font-size="13">Mostrar error:</text>
+  <text x="110" y="628" text-anchor="middle" fill="white" font-size="13">"Elija un tipo"</text>
+  <path d="M110,585 L110,490 L450,490" fill="none" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Si -->
+  <line x1="450" y1="680" x2="450" y2="715" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="465" y="700" font-size="13" fill="#2e7d32">Sí</text>
+
+  <!-- Inicializar contraseña vacia -->
+  <rect x="300" y="715" width="300" height="55" fill="#1565c0" stroke="#0d47a1" stroke-width="2" rx="6"/>
+  <text x="450" y="748" text-anchor="middle" fill="white" font-size="14">contraseña = "" </text>
+  <line x1="450" y1="770" x2="450" y2="805" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Bucle: mientras len < longitud -->
+  <polygon points="450,805 620,865 450,925 280,865" fill="#fce4ec" stroke="#ad1457" stroke-width="2"/>
+  <text x="450" y="860" text-anchor="middle" font-size="13">¿len(contraseña)</text>
+  <text x="450" y="878" text-anchor="middle" font-size="13">&lt; longitud?</text>
+
+  <!-- Si -> agregar caracter -->
+  <line x1="620" y1="865" x2="730" y2="865" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="660" y="855" font-size="13" fill="#2e7d32">Sí</text>
+  <rect x="690" y="838" width="190" height="55" fill="#1565c0" stroke="#0d47a1" stroke-width="2" rx="6"/>
+  <text x="785" y="862" text-anchor="middle" fill="white" font-size="13">Elegir carácter</text>
+  <text x="785" y="880" text-anchor="middle" fill="white" font-size="13">aleatorio y agregarlo</text>
+  <path d="M785,838 L785,790 L450,790" fill="none" stroke="#333" stroke-width="2"/>
+  <path d="M785,790 L785,770" fill="none" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="785" y1="838" x2="785" y2="790" stroke="#333" stroke-width="2"/>
+  <path d="M785,790 L460,790" fill="none" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- No -> salir de bucle -->
+  <line x1="450" y1="925" x2="450" y2="960" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="465" y="945" font-size="13" fill="#c62828">No</text>
+
+  <!-- Calcular fortaleza -->
+  <rect x="300" y="960" width="300" height="55" fill="#1565c0" stroke="#0d47a1" stroke-width="2" rx="6"/>
+  <text x="450" y="993" text-anchor="middle" fill="white" font-size="14">Calcular fortaleza</text>
+  <line x1="450" y1="1015" x2="450" y2="1050" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Mostrar resultado -->
+  <rect x="260" y="1050" width="380" height="55" fill="#1565c0" stroke="#0d47a1" stroke-width="2" rx="6"/>
+  <text x="450" y="1083" text-anchor="middle" fill="white" font-size="14">Mostrar contraseña y fortaleza</text>
+  <line x1="450" y1="1105" x2="450" y2="1140" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Decision otra vez -->
+  <polygon points="450,1140 600,1200 450,1260 300,1200" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+  <text x="450" y="1195" text-anchor="middle" font-size="13">¿Generar</text>
+  <text x="450" y="1213" text-anchor="middle" font-size="13">otra?</text>
+
+  <!-- Si -> volver al menu -->
+  <path d="M600,1200 L800,1200 L800,150 L580,150" fill="none" stroke="#2e7d32" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="700" y="1190" font-size="13" fill="#2e7d32">Sí</text>
+
+  <!-- No -> fin -->
+  <line x1="450" y1="1260" x2="450" y2="1300" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="465" y="1283" font-size="13" fill="#c62828">No</text>
+  <ellipse cx="450" cy="1335" rx="80" ry="35" fill="#c62828" stroke="#8e0000" stroke-width="2"/>
+  <text x="450" y="1341" text-anchor="middle" fill="white" font-size="16" font-weight="bold">FIN</text>
+</svg>
